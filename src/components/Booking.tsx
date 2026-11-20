@@ -47,7 +47,7 @@ export default function Booking() {
     const trimmedNotes = notes.trim();
 
     const messageParts = [
-      `Hello DEZERT Makeover Studio,${trimmedName ? ` my name is ${trimmedName}.` : ''} I would like to book ${selected.service} (${selected.category}) starting from ${formatRupees(selected.price)}`,
+      `Hello Beyond Beauty,${trimmedName ? ` my name is ${trimmedName}.` : ''} I would like to book ${selected.service} (${selected.category}) starting from ${formatRupees(selected.price)}`,
       preferredDate ? `on ${preferredDate}` : null,
       timeSlot ? `during the ${timeSlot} slot` : null,
     ]
@@ -80,7 +80,7 @@ export default function Booking() {
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a
-                href={buildWhatsAppUrl('Hello DEZERT Makeover Studio, I would like to book an appointment. Please let me know the available time slots.')}
+                href={buildWhatsAppUrl('Hello Beyond Beauty, I would like to book an appointment. Please let me know the available time slots.')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold"

@@ -1,4 +1,4 @@
-import { Clock, Heart, MapPin, Phone } from 'lucide-react';
+import { Clock, MapPin, Phone } from 'lucide-react';
 import Logo from '@/components/Logo';
 import { NAV_LINKS } from '@/data/navigation';
 import { STUDIO } from '@/lib/studio';
@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="lg:col-span-1">
           <Logo tone="light" />
           <p className="mt-6 max-w-xs font-sans text-sm leading-[1.5] text-white/70">
-            A premium makeover studio in Tirur, offering bridal, hair, skin and nail care with refined, personal attention.
+            A dedicated ladies beauty salon in Tirur, offering bridal, hair, skin and nail care with refined, personal attention.
           </p>
         </div>
 
@@ -53,7 +53,7 @@ export default function Footer() {
         <div>
           <h3 className="font-sans text-xs font-semibold uppercase tracking-[0.25em] text-primary-300">Visit Us</h3>
           <p className="mt-6 font-sans text-sm leading-[1.5] text-white/75">
-            Find us on the Edappal–Tirur Road, near the Indian Oil petrol pump in Pottethappadi.
+            Find us at Moulana Space on Ring Road, opposite Axis Bank in Tirur.
           </p>
           <a
             href={STUDIO.mapsDirectionsUrl}

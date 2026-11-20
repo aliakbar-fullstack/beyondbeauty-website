@@ -33,7 +33,7 @@ export default function Contact() {
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
             <span className="section-eyebrow">Contact &amp; Location</span>
-            <h2 className="mt-4 font-serif text-4xl font-medium sm:text-5xl">Visit DEZERT in Tirur</h2>
+            <h2 className="mt-4 font-serif text-4xl font-medium sm:text-5xl">Visit Beyond Beauty in Tirur</h2>
             <div className="gold-divider mx-auto mt-6" aria-hidden="true" />
           </div>
         </Reveal>
@@ -49,7 +49,7 @@ export default function Contact() {
                   <div>
                     <p className="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-primary-700">Address</p>
                     <p className="mt-2 font-sans text-base leading-[1.5] text-secondary-900">
-                      DEZERT Makeover Studio
+                      Beyond Beauty – Ladies Beauty Salon
                       <br />
                       {STUDIO.address}
                     </p>
@@ -106,7 +106,7 @@ export default function Contact() {
           <Reveal delay={150} className="lg:col-span-3">
             <div className="relative h-full min-h-[24rem] overflow-hidden rounded-3xl border border-primary-300/60 bg-white shadow-lift">
               <iframe
-                title="Map showing DEZERT Makeover Studio in Tirur"
+                title="Map showing Beyond Beauty – Ladies Beauty Salon in Tirur"
                 src={STUDIO.mapsEmbedUrl}
                 className="absolute inset-0 h-full w-full border-0 grayscale-[20%] contrast-[1.05]"
                 loading="lazy"

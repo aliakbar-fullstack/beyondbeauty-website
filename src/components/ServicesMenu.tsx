@@ -6,7 +6,7 @@ import { formatRupees } from '@/lib/format';
 import { buildWhatsAppUrl } from '@/lib/studio';
 
 function bookingMessage(categoryName: string, serviceName: string, price: number): string {
-  return `Hello DEZERT Makeover Studio, I would like to book ${serviceName} (${categoryName}) starting from ${formatRupees(price)}. Please share the available time slots.`;
+  return `Hello Beyond Beauty, I would like to book ${serviceName} (${categoryName}) starting from ${formatRupees(price)}. Please share the available time slots.`;
 }
 
 interface ServiceCardProps {

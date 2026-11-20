@@ -33,7 +33,7 @@ export default function Navbar() {
         }`}
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8" aria-label="Main">
-          <a href="#home" className="shrink-0" aria-label="DEZERT Makeover Studio home">
+          <a href="#home" className="shrink-0" aria-label="Beyond Beauty – Ladies Beauty Salon home">
             <Logo tone={solid ? 'dark' : 'light'} />
           </a>
 

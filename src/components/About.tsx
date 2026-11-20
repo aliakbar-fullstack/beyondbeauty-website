@@ -9,7 +9,7 @@ const HIGHLIGHTS = [
   'Bridal, party and everyday makeovers',
   'Precision hair cutting, colour and treatments',
   'Customised skin care and luxury nail rituals',
-  'A calm, private studio experience',
+  'A calm, dedicated ladies salon experience',
 ];
 
 export default function About() {
@@ -22,7 +22,7 @@ export default function About() {
             <div className="overflow-hidden rounded-[2rem] shadow-lift">
               <img
                 src={ABOUT_IMAGE}
-                alt="Modern DEZERT studio interior with styling chairs and warm lighting"
+                alt="Modern Beyond Beauty ladies salon interior with styling chairs and warm lighting"
                 loading="lazy"
                 className="aspect-[4/5] w-full object-cover transition-transform duration-[1.2s] ease-out hover:scale-105"
               />
@@ -33,7 +33,7 @@ export default function About() {
               </span>
               <div>
                 <p className="font-serif text-lg font-semibold leading-tight text-secondary-900">Tirur, Kerala</p>
-                <p className="font-sans text-xs text-secondary-600">Edappal–Tirur Road</p>
+                <p className="font-sans text-xs text-secondary-600">Moulana Space, Ring Road</p>
               </div>
               
             </div>
@@ -42,19 +42,19 @@ export default function About() {
 
         <Reveal delay={150}>
           <div>
-            <span className="section-eyebrow">About DEZERT</span>
+            <span className="section-eyebrow">About Beyond Beauty</span>
             <h2 className="mt-4 font-serif text-4xl font-medium sm:text-5xl">
               Beauty, Elegance <span className="italic text-primary-700">&amp;</span> Confidence
             </h2>
             <div className="gold-divider mt-8 !mx-0 !w-24" aria-hidden="true" />
             <p className="mt-8 font-sans text-base leading-[1.5] text-secondary-700 sm:text-lg">
-              DEZERT Makeover Studio is a premium beauty destination in Tirur, bringing together expert hair, skin,
-              makeup and nail care under one refined roof. Every appointment begins with a conversation, so the look
-              you leave with feels entirely like you, only more polished.
+              Beyond Beauty – Ladies Beauty Salon is a welcoming beauty destination in Tirur, bringing together expert
+              hair, skin, makeup and nail care under one refined roof. Every appointment begins with a conversation, so
+              the look you leave with feels entirely like you, only more polished.
             </p>
             <p className="mt-5 font-sans text-base leading-[1.5] text-secondary-700 sm:text-lg">
-              From intimate bridal preparations to a quick grooming refresh, our team brings careful technique, quality
-              products and unhurried attention to every detail.
+              From bridal preparations to everyday beauty care, our team brings careful technique, quality products and
+              unhurried attention to every detail.
             </p>
 
             <ul className="mt-8 space-y-4">
@@ -69,7 +69,7 @@ export default function About() {
             </ul>
 
             <p className="mt-10 font-sans text-sm text-secondary-600">
-              Studio open daily, <span className="font-semibold text-secondary-800">{STUDIO.hoursDisplay}</span>
+              Salon open daily, <span className="font-semibold text-secondary-800">{STUDIO.hoursDisplay}</span>
             </p>
           </div>
         </Reveal>

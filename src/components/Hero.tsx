@@ -22,7 +22,7 @@ export default function Hero() {
             style={{ animationDelay: '0.1s' }}
           >
             <span className="h-1.5 w-1.5 rounded-full bg-primary-400" aria-hidden="true" />
-            tirur,Kerala
+            Tirur, Kerala
           </p>
 
           <h1
@@ -36,7 +36,7 @@ export default function Hero() {
             className="animate-fade-up mt-6 max-w-xl font-sans text-base leading-[1.5] text-white/85 sm:text-lg"
             style={{ animationDelay: '0.4s' }}
           >
-            Discover your beauty with professional care, expert styling and a premium makeover experience at DEZERT.
+            Discover your beauty with professional care, expert styling and a dedicated ladies beauty salon experience at Beyond Beauty.
           </p>
 
           <div
@@ -73,14 +73,14 @@ export default function Hero() {
               </span>
             </span>
             <span className="hidden h-4 w-px bg-white/30 sm:block" aria-hidden="true" />
-            <span>Open daily, 9:30 AM – 10:00 PM</span>
+            <span>{STUDIO.hoursDisplay}</span>
           </div>
         </div>
       </div>
 
       <a
         href="#about"
-        aria-label="Scroll to about the studio"
+        aria-label="Scroll to about the salon"
         className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-white/70 transition-colors hover:text-white md:flex"
       >
         <span className="font-sans text-[0.65rem] uppercase tracking-[0.3em]">Scroll</span>

@@ -30,7 +30,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   { id: 'g2', src: px('33927084'), alt: 'Close-up of bridal lip makeup artistry', category: 'Bridal Makeovers', tall: true },
   { id: 'g3', src: px('35983907'), alt: 'Indoor bridal makeup session', category: 'Bridal Makeovers' },
   { id: 'g4', src: px('17905958'), alt: 'Woman in a sequined dress with warm party lighting', category: 'Party Makeup', tall: true },
-  { id: 'g5', src: px('11334142'), alt: 'Portrait with bold party makeup', category: 'Party Makeup' },
+  // { id: 'g5', src: px('11334142'), alt: 'Portrait with bold party makeup', category: 'Party Makeup' },
   { id: 'g6', src: px('6155638'), alt: 'Festive makeup with pearl jewellery', category: 'Party Makeup' },
   { id: 'g7', src: px('6391646'), alt: 'Ombre curly hair styling', category: 'Hair Styling', tall: true },
   { id: 'g8', src: px('3993323'), alt: 'Hair colouring treatment in a modern salon', category: 'Hair Styling' },

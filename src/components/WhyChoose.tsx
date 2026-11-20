@@ -10,7 +10,7 @@ interface Value {
 const VALUES: Value[] = [
   {
     title: 'Professional Care',
-    description: 'Trained hands, hygienic tools and premium products chosen for healthy hair and skin.',
+    description: 'Trained hands, hygienic tools and quality products chosen for healthy hair and skin.',
     icon: ShieldCheck,
   },
   {
@@ -25,7 +25,7 @@ const VALUES: Value[] = [
   },
   {
     title: 'Comfortable Atmosphere',
-    description: 'A calm, elegant studio where you can relax, unwind and enjoy every moment.',
+    description: 'A calm, welcoming ladies salon where you can relax, unwind and enjoy every moment.',
     icon: Armchair,
   },
 ];
@@ -36,7 +36,7 @@ export default function WhyChoose() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
-            <span className="section-eyebrow">Why Choose DEZERT</span>
+            <span className="section-eyebrow">Why Choose Beyond Beauty</span>
             <h2 id="why-heading" className="mt-4 font-serif text-4xl font-medium sm:text-5xl">
               Luxury that feels personal
             </h2>

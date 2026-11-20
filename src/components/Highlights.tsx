@@ -13,10 +13,10 @@ interface Stat {
 }
 
 const STATS: Stat[] = [
-  { label: 'Happy Clients', value: 3000, suffix: '+', icon: Smile, note: 'Brides, guests and everyday clients' },
-  { label: 'Professional Services', value: SERVICE_CATEGORIES.length, suffix: '', icon: Sparkles, note: 'Eight signature categories' },
-  { label: 'Years of Experience', value: 5, suffix: '+', icon: Award, note: 'Refined craft in hair and makeup' },
-  { label: 'Customer Satisfaction', value: 4.8, suffix: '/5', decimals: 1, icon: Star, note: 'Google Maps rating reference' },
+  { label: 'Happy Clients', value: 3000, suffix: '+', icon: Smile, note: 'Brides, guests and regular ladies' },
+  { label: 'Professional Services', value: SERVICE_CATEGORIES.length, suffix: '', icon: Sparkles, note: 'Signature hair, skin, bridal and nail care' },
+  { label: 'Years of Experience', value: 5, suffix: '+', icon: Award, note: 'Refined craft in hair, skin and makeup' },
+  { label: 'Customer Satisfaction', value: 4.9, suffix: '/5', decimals: 1, icon: Star, note: 'Google Maps rating reference' },
 ];
 
 function useCountUp(target: number, decimals = 0) {
@@ -78,12 +78,12 @@ function StatCard({ stat, delay }: { stat: Stat; delay: number }) {
 
 export default function Highlights() {
   return (
-    <section aria-label="Studio highlights" className="relative bg-white py-20 sm:py-24">
+    <section aria-label="Salon highlights" className="relative bg-white py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
-            <span className="section-eyebrow">Studio Highlights</span>
-            <h2 className="mt-4 font-serif text-4xl font-medium sm:text-5xl">A studio trusted for its finish</h2>
+            <span className="section-eyebrow">Salon Highlights</span>
+            <h2 className="mt-4 font-serif text-4xl font-medium sm:text-5xl">A ladies salon trusted for its finish</h2>
             <div className="gold-divider mx-auto mt-6" aria-hidden="true" />
           </div>
         </Reveal>
