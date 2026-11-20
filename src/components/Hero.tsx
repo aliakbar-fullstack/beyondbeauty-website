@@ -2,14 +2,14 @@ import { ArrowRight, ChevronDown, CalendarCheck, Star } from 'lucide-react';
 import { GENERAL_BOOKING_MESSAGE, STUDIO, buildWhatsAppUrl } from '@/lib/studio';
 
 const HERO_IMAGE =
-  'https://images.pexels.com/photos/35983950/pexels-photo-35983950.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop';
+  'https://images.pexels.com/photos/28863315/pexels-photo-28863315.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop';
 
 export default function Hero() {
   return (
     <section id="home" className="relative isolate flex min-h-[100svh] items-center overflow-hidden bg-secondary-900">
       <img
         src={HERO_IMAGE}
-        alt=""
+        alt="hero image"
         aria-hidden="true"
         className="absolute inset-0 -z-20 h-full w-full animate-slow-zoom object-cover"
       />
@@ -23,7 +23,7 @@ export default function Hero() {
             style={{ animationDelay: '0.1s' }}
           >
             <span className="h-1.5 w-1.5 rounded-full bg-primary-400" aria-hidden="true" />
-            Tirur, Kerala
+            tirur,Kerala
           </p>
 
           <h1

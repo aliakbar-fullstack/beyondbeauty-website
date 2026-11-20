@@ -40,4 +40,5 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   { id: 'g12', src: px('13068377'), alt: 'Modern salon with black and white decor', category: 'Studio Interiors', tall: true },
   { id: 'g13', src: px('10279714'), alt: 'Makeup artist applying eyeshadow and lipstick', category: 'Makeup Results' },
   { id: 'g14', src: px('1020051'), alt: 'Fashionable woman with artistic makeup', category: 'Makeup Results' },
+  { id: 'g15', src: px('23349912'), alt: 'Hair dessing and combing', category: 'Hair Styling' },
 ];

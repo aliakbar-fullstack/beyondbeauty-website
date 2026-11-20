@@ -71,7 +71,6 @@ export default function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-5 py-6 font-sans text-xs text-white/60 sm:flex-row sm:px-8">
           <p>&copy; {year} {STUDIO.name}. All rights reserved.</p>
           <p className="inline-flex items-center gap-1.5">
-            Crafted with <Heart className="h-3.5 w-3.5 fill-primary-400 text-primary-400" aria-hidden="true" /> in Tirur, Kerala
           </p>
         </div>
       </div>

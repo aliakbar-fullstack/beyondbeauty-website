@@ -5,6 +5,12 @@ import { SERVICE_CATEGORIES } from '@/data/services';
 import { formatRupees } from '@/lib/format';
 import { STUDIO, buildWhatsAppUrl } from '@/lib/studio';
 
+const TIME_SLOTS = [
+  'Morning (9:00 AM – 12:00 PM)',
+  'Afternoon (12:00 PM – 4:00 PM)',
+  'Evening (4:00 PM – 8:00 PM)',
+];
+
 export default function Booking() {
   const options = useMemo(
     () =>
@@ -21,8 +27,11 @@ export default function Booking() {
     [],
   );
 
+  const [clientName, setClientName] = useState('');
   const [selectedKey, setSelectedKey] = useState('');
   const [preferredDate, setPreferredDate] = useState('');
+  const [timeSlot, setTimeSlot] = useState('');
+  const [notes, setNotes] = useState('');
   const [error, setError] = useState('');
 
   const selected = options.flatMap((group) => group.items).find((item) => item.key === selectedKey);
@@ -33,10 +42,26 @@ export default function Booking() {
       return;
     }
     setError('');
-    const dateText = preferredDate ? ` on ${preferredDate}` : '';
-    const message = `Hello DEZERT Makeover Studio, I would like to book ${selected.service} (${selected.category}) starting from ${formatRupees(selected.price)}${dateText}. Please confirm the availability.`;
+
+    const trimmedName = clientName.trim();
+    const trimmedNotes = notes.trim();
+
+    const messageParts = [
+      `Hello DEZERT Makeover Studio,${trimmedName ? ` my name is ${trimmedName}.` : ''} I would like to book ${selected.service} (${selected.category}) starting from ${formatRupees(selected.price)}`,
+      preferredDate ? `on ${preferredDate}` : null,
+      timeSlot ? `during the ${timeSlot} slot` : null,
+    ]
+      .filter(Boolean)
+      .join(' ');
+
+    const notesLine = trimmedNotes ? `\nNotes: ${trimmedNotes}` : '';
+    const message = `${messageParts}.${notesLine}\nPlease confirm the availability.`;
+
     window.open(buildWhatsAppUrl(message), '_blank', 'noopener,noreferrer');
   };
+
+  const inputClass =
+    'mt-2 w-full rounded-2xl border border-primary-300 bg-white px-4 py-3.5 font-sans text-base text-secondary-900 transition focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-300';
 
   return (
     <section id="booking" className="scroll-mt-20 relative overflow-hidden bg-white py-24 sm:py-32">
@@ -83,7 +108,21 @@ export default function Booking() {
             <h3 className="font-serif text-3xl font-semibold text-secondary-900">Quick booking request</h3>
             <p className="mt-2 font-sans text-sm text-secondary-600">Your message is pre-filled with your choice.</p>
 
-            <div className="mt-8 space-y-6">
+            <div className="mt-8 space-y-5">
+              <div>
+                <label htmlFor="booking-name" className="block font-sans text-sm font-semibold text-secondary-800">
+                  Your name <span className="font-normal text-secondary-600">(optional)</span>
+                </label>
+                <input
+                  id="booking-name"
+                  type="text"
+                  value={clientName}
+                  onChange={(e) => setClientName(e.target.value)}
+                  placeholder="Enter your name"
+                  className={inputClass}
+                />
+              </div>
+
               <div>
                 <label htmlFor="booking-service" className="block font-sans text-sm font-semibold text-secondary-800">
                   Service
@@ -97,7 +136,7 @@ export default function Booking() {
                   }}
                   aria-invalid={error ? true : undefined}
                   aria-describedby={error ? 'booking-error' : undefined}
-                  className="mt-2 w-full rounded-2xl border border-primary-300 bg-white px-4 py-3.5 font-sans text-base text-secondary-900 transition focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-300"
+                  className={inputClass}
                 >
                   <option value="">Select a service</option>
                   {options.map((group) => (
@@ -112,17 +151,52 @@ export default function Booking() {
                 </select>
               </div>
 
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div>
+                  <label htmlFor="booking-date" className="block font-sans text-sm font-semibold text-secondary-800">
+                    Preferred date <span className="font-normal text-secondary-600"></span>
+                  </label>
+                  <input
+                    id="booking-date"
+                    type="date"
+                    value={preferredDate}
+                    min={new Date().toISOString().slice(0, 10)}
+                    onChange={(e) => setPreferredDate(e.target.value)}
+                    className={inputClass}
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="booking-time" className="block font-sans text-sm font-semibold text-secondary-800">
+                    Time slot <span className="font-normal text-secondary-600">(optional)</span>
+                  </label>
+                  <select
+                    id="booking-time"
+                    value={timeSlot}
+                    onChange={(e) => setTimeSlot(e.target.value)}
+                    className={inputClass}
+                  >
+                    <option value="">Any time</option>
+                    {TIME_SLOTS.map((slot) => (
+                      <option key={slot} value={slot}>
+                        {slot}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
               <div>
-                <label htmlFor="booking-date" className="block font-sans text-sm font-semibold text-secondary-800">
-                  Preferred date <span className="font-normal text-secondary-600">(optional)</span>
+                <label htmlFor="booking-notes" className="block font-sans text-sm font-semibold text-secondary-800">
+                  Notes <span className="font-normal text-secondary-600">(optional)</span>
                 </label>
-                <input
-                  id="booking-date"
-                  type="date"
-                  value={preferredDate}
-                  min={new Date().toISOString().slice(0, 10)}
-                  onChange={(e) => setPreferredDate(e.target.value)}
-                  className="mt-2 w-full rounded-2xl border border-primary-300 bg-white px-4 py-3.5 font-sans text-base text-secondary-900 transition focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-300"
+                <textarea
+                  id="booking-notes"
+                  rows={2}
+                  value={notes}
+                  onChange={(e) => setNotes(e.target.value)}
+                  placeholder="Any special requests, venue details, or extra guests..."
+                  className={`${inputClass} resize-none`}
                 />
               </div>
 

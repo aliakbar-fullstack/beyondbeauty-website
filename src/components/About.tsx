@@ -35,6 +35,7 @@ export default function About() {
                 <p className="font-serif text-lg font-semibold leading-tight text-secondary-900">Tirur, Kerala</p>
                 <p className="font-sans text-xs text-secondary-600">Edappal–Tirur Road</p>
               </div>
+              
             </div>
           </div>
         </Reveal>

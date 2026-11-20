@@ -13,19 +13,19 @@ export default function Logo({ tone = 'dark', compact = false }: LogoProps) {
 
   return (
     <div className="flex items-center gap-3" aria-label={STUDIO.name}>
-      <span className="relative flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white ring-1 ring-primary-400/70 shadow-soft">
+      <span className="relative flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden">
         <img
-          src="/assets/images/D_logo.png"
-          alt=""
+          src={`${import.meta.env.BASE_URL}assets/images/D_logo.png`}
+          alt="logo"
           aria-hidden="true"
-          className="pointer-events-none h-[200%] w-[200%] max-w-none object-contain mix-blend-multiply"
+          className={`pointer-events-none h-[200%] w-[200%] max-w-none object-contain ${tone === 'light' ? 'mix-blend-screen brightness-125 filter' : 'mix-blend-multiply'}`}
         />
       </span>
       {!compact && (
         <span
-          className={`select-none bg-clip-text font-sans text-[1.65rem] font-medium lowercase leading-none tracking-[0.02em] text-transparent ${wordmarkClass}`}
+          className={`select-none bg-clip-text font-sans text-[1.65rem] font-medium leading-none tracking-[0.02em] text-transparent ${wordmarkClass}`}
         >
-          dezert
+          Dezert
         </span>
       )}
     </div>
