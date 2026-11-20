@@ -1,16 +1,15 @@
 import { ArrowRight, ChevronDown, CalendarCheck, Star } from 'lucide-react';
 import { GENERAL_BOOKING_MESSAGE, STUDIO, buildWhatsAppUrl } from '@/lib/studio';
 
-const HERO_IMAGE =
-  'https://images.pexels.com/photos/28863315/pexels-photo-28863315.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop';
 
 export default function Hero() {
   return (
     <section id="home" className="relative isolate flex min-h-[100svh] items-center overflow-hidden bg-secondary-900">
       <img
-        src={HERO_IMAGE}
+        src={`${import.meta.env.BASE_URL}assets/images/beautysalon-hero.png`}
         alt="hero image"
         aria-hidden="true"
+        fetchPriority="high"
         className="absolute inset-0 -z-20 h-full w-full animate-slow-zoom object-cover"
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-secondary-900/90 via-secondary-900/65 to-secondary-900/25" />
